@@ -55,8 +55,9 @@ def abrir_bibilioteca():
 @app.route('/jogos/criar', methods=['GET', 'POST'])
 def criar_jogo():
     if request.method == 'POST':
+        codigo_ult = len(biblioteca) + 1
         new_game = {
-            'código': request.form.get('codigo'),
+            'código': codigo_ult,
             'nome': request.form.get('nome'),
             'gênero': request.form.get('genero'),
             'preço': request.form.get('preco'),
@@ -64,7 +65,6 @@ def criar_jogo():
         for j in biblioteca:
             if j['código'] == new_game['código']:
                 return jsonify("Erro: Jogo já existe"), 200
-        
         biblioteca.append(new_game)
         dados.save(biblioteca)
         return render_template('biblioteca.html', biblioteca = biblioteca)

@@ -1,48 +1,48 @@
 [
     {
-        "código": "0001",
+        "código": "1",
         "nome": "Hollow Knight: Silksong",
         "gênero": "Metroidvania",
         "preço": 59.99
     },
     {
-        "código": "0002",
+        "código": "2",
         "nome": "Slay The Spire",
         "gênero": "Roguelike Deckbuilder",
         "preço": 74.99
     },
     {
-        "código": "0003",
+        "código": "3",
         "nome": "Outhold",
         "gênero": "Tower Defense",
         "preço": 14.99
     },
     {
-        "código": "0004",
+        "código": "4",
         "nome": "ARC Raiders",
         "gênero": "Extraction Shooter",
         "preço": 79.99
     },
     {
-        "código": "0005",
+        "código": "5",
         "nome": "Code Vein",
         "gênero": "Souls-like",
         "preço": 149.99
     },
     {
-        "código": "0006",
+        "código": "6",
         "nome": "Xcom 2",
         "gênero": "Estratégia",
         "preço": 99.9
     },
     {
-        "código": "0007",
+        "código": "7",
         "nome": "Mewgenics",
         "gênero": "Estratégia",
         "preço": 89.9
     },
     {
-        "código": "0008",
+        "código": "8",
         "nome": "Dark Souls 3",
         "gênero": "Souls-like",
         "preço": 59.99

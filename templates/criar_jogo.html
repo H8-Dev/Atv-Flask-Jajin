@@ -6,11 +6,11 @@
 
 {% block conteudo%}
 <h2>Cadastrar Novo Jogo</h2>
-<form action="criar_jogo.html" method="POST">
-    <label>Código: <input type="text" name="codigo" required> </label><br>
-    <label>Nome:  <input type="text" name="nome" required> </label><br>
-    <label>Gênero:  <input type="text" name="genero" required> </label><br>
-    <label>Preço:  <input type="text" name="preco" required> </label><br>
+<form action="/jogos/criar" method="POST">
+    <label>Nome: <input type="text" name="nome" required> </label><br>
+    <label>Gênero: <input type="text" name="genero" required> </label><br>
+    <label>Preço: <input type="text" name="preco" required> </label><br>
+    <button type="submit">Criar</button>
 </form>
 
 {% endblock %}
