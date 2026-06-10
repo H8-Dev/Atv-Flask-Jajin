@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block logo %} {% endblock %}
+{% block titulo %}
+    <title>Criar Jogo</title>
+{% endblock %}
+
+
+{% block conteudo%}
+<h2>Cadastrar Novo Jogo</h2>
+<form action="criar_jogo.html" method="POST">
+    <label style="margin-right: 20px;">Código: </label>
+    <label style="margin-right: 20px;">Nome:</label>
+    <label style="margin-right: 20px;">Gênero</label>
+    <label style="margin-right: 20px;">Preço</label>
+</form>
+
+{% endblock %}
