@@ -46,5 +46,11 @@
         "nome": "Dark Souls 3",
         "gênero": "Souls-like",
         "preço": 59.99
+    },
+    {
+        "código": 9,
+        "nome": "Awaria",
+        "gênero": "Bullet Hell",
+        "preço": "0.00"
     }
 ]
