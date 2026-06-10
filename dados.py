@@ -1,4 +1,4 @@
-import json
+import json 
 
 def data_prep():
     with open("banco.json", "r", encoding="utf-8") as banco:

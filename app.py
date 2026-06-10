@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect, url_for
 import dados
 
 biblioteca = dados.data_prep()
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def check():
-    return print("O servidor esta no ar")
+    return "O servidor esta no ar"
 
 @app.route('/biblioteca', methods=['GET', 'POST'])
 @app.route('/biblioteca/<codigo>', methods=['GET', 'DELETE', 'PUT'])
@@ -27,7 +27,7 @@ def manipula_biblioteca(codigo = None):
             novo_jogo = request.get_json()
             for j in biblioteca:
                 if j['código'] == novo_jogo['código']:
-                    return jsonify("Erro: Jogo já existe"), 200
+                    return jsonify("Erro: Jogo ja existe"), 200
             biblioteca.append(novo_jogo)
             dados.save(biblioteca)
             return jsonify("Jogo cadastrado com sucesso."), 201
@@ -64,13 +64,12 @@ def criar_jogo():
             }
         for j in biblioteca:
             if j['código'] == new_game['código']:
-                return jsonify("Erro: Jogo já existe"), 200
+                return jsonify("Erro: Jogo ja existe"), 200
         biblioteca.append(new_game)
         dados.save(biblioteca)
-        return render_template('biblioteca.html', biblioteca = biblioteca)
+        return redirect(url_for('abrir_bibilioteca'))
     else:
         return render_template('criar_jogo.html')
-
 
 
 
