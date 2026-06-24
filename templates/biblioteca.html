@@ -6,6 +6,9 @@
 {% block conteudo%}
 
     <h1 class="display-6">Biblioteca de Jogos</h1>
+    <form action="{{ url_for('criar_jogo') }}" method="GET">
+        <h2 class="display-6">Inserir Jogo: <button type="submit" style="font-size: 12; display:inline;">Criar</button></h2>
+    </form>
     <table class="table table-dark">
         <thead>
             <tr>
@@ -16,7 +19,10 @@
                         <th>{{ key[0] | replace('_',' ') | capitalize }}</th>
                     {% endif %}
                 {% endfor %}
+                <th>Excluir</th>
+                <th>Update</th>
             </tr>
+            
         </thead>
         {% for livro in biblioteca %}
             <tbody>
@@ -25,9 +31,27 @@
                     <td>{{ livro.nome }}</td>
                     <td>{{ livro.gênero }}</td>
                     <td>{{ livro.preço }}</td>
+                    <td>
+                        <form action="{{ url_for('deletar_jogo', codigo=livro.código) }}" method="POST" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja deletar esse item?');">
+                            <button type="submit">Deletar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="{{ url_for('atualizar_jogo') }}" method="POST" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja atualizar esse item?');">
+                            <input type="text" name="codigo" value="{{ livro.código }}" hidden>
+                            <input type="text" name="nome" value="{{ livro.nome }}" hidden>
+                            <input type="text" name="genero" value="{{ livro.gênero }}" hidden>
+                            <input type="text" name="preco" value="{{ livro.preço }}" hidden>
+                            <input type="text" name="type" value="site" hidden>
+                            <button type="submit">Atualizar</button>
+                        </form>
+                    </td>
                 </tr>
             </tbody>
         {% endfor %}
+        <tbody>
+            
+        </tbody>
     </table>
 
 {% endblock %}

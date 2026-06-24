@@ -48,33 +48,51 @@
         "preço": 59.99
     },
     {
-        "código": 9,
+        "código": "9",
         "nome": "Awaria",
         "gênero": "Bullet Hell",
         "preço": "0.00"
     },
     {
-        "código": 10,
+        "código": "10",
         "nome": "CodeVein",
         "gênero": "Souls-Like",
         "preço": "149.99"
     },
     {
-        "código": 11,
+        "código": "11",
         "nome": "CodeVein",
         "gênero": "Souls-Like",
         "preço": "149.99"
     },
     {
-        "código": 12,
+        "código": "12",
         "nome": "CodeVein",
         "gênero": "Souls-Like",
         "preço": "149.99"
     },
     {
-        "código": 13,
+        "código": "13",
         "nome": "Is This Seat Taken?",
         "gênero": "Puzzle",
         "preço": "34.99"
+    },
+    {
+        "código": "14",
+        "nome": "Operator",
+        "gênero": "FPS",
+        "preço": "59.99"
+    },
+    {
+        "código": "15",
+        "nome": "Crashout Crew",
+        "gênero": "Arcade",
+        "preço": "23.99"
+    },
+    {
+        "código": "16",
+        "nome": "Warhammer 40,000: Darktide",
+        "gênero": "FPS",
+        "preço": "149.95"
     }
 ]

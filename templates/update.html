@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block titulo %}
+    <title>Atualizar Jogo</title>
+{% endblock %}
+
+
+{% block conteudo%}
+<h2>Atualizar Jogo</h2>
+<form action="{{ url_for('atualizar_jogo') }}" method="POST">
+    <input type="text" name="type" value="update" hidden>
+    <label>ID: {{ codigo }}</label> <input type="text" name="codigo" required value="{{ codigo }}" hidden><br>
+    <label>Nome: <input type="text" name="nome" required value="{{ nome }}"> </label><br>
+    <label>Gênero: <input type="text" name="genero" required value="{{ genero }}"> </label><br>
+    <label>Preço: <input type="text" name="preco" required value="{{ preco }}"> </label><br>
+    <button type="submit">Atualizar</button>
+</form>
+
+{% endblock %}
